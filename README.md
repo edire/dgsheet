@@ -24,4 +24,5 @@ MIT License
 
 ## Updates
 
+10/27/2023 - Updated read_gsheet for traditional read_excel functionality.
 06/26/2023 - Initial Commit.
