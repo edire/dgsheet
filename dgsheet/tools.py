@@ -13,7 +13,7 @@ def read_gsheet(
 ):
     gc = gspread.service_account(filename=filepath_cred)
     wb = gc.open_by_url(url)
-    sheet_id = url.split('gid=')[1]
+    sheet_id = url.split('gid=')[-1]
 
     for ws in wb.worksheets():
         if f'id:{sheet_id}' in str(ws):

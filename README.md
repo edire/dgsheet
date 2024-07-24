@@ -24,5 +24,6 @@ MIT License
 
 ## Updates
 
+07/24/2024 - Updated for new URL structure with gid repeated
 10/27/2023 - Updated read_gsheet for traditional read_excel functionality.
 06/26/2023 - Initial Commit.

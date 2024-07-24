@@ -2,7 +2,7 @@
 from setuptools import setup
 setup(
     name='dgsheet',
-    version='0.1.0',
+    version='0.1.1',
     author='Eric Di Re',
     description='Custom GSheet and Pandas Communication',
     url='https://github.com/edire/dgsheet.git',
