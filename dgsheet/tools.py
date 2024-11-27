@@ -43,7 +43,8 @@ def to_gsheet(
         df,
         url,
         range='A1',
-        filepath_cred=os.getenv('GSHEET_CRED')
+        filepath_cred=os.getenv('GSHEET_CRED'),
+        clear_sheet=False
 ):
     gc = gspread.service_account(filename=filepath_cred)
     wb = gc.open_by_url(url)
@@ -59,4 +60,6 @@ def to_gsheet(
     sheet_id = url.split('gid=')[-1]
     for ws in wb.worksheets():
         if f'id:{sheet_id}' in str(ws):
+            if clear_sheet:
+                ws.clear()
             set_with_dataframe(ws, df, include_index=False, include_column_header=True, row=row, col=col)
